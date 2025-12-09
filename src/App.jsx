@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Music, Users, Mic, Heart, Star, Home, TrendingUp, Plus } from 'lucide-react';
 
-
+//----------TuneTogether App----------
 
 function TuneTogetherApp() {
   
@@ -44,7 +44,7 @@ function TuneTogetherApp() {
     { id: 3, title: 'Paint The Town Red', artist: 'Doja Cat', plays: '1.8M' }
   ];
 
-
+  // Functions
   function handleLike(songId) {
     if (likedSongs.includes(songId)) {
    
@@ -116,7 +116,8 @@ function TuneTogetherApp() {
       </div>
     );
   }
-
+  
+  // Homepage
   function HomePage() {
     return (
       <div className="space-y-6">
