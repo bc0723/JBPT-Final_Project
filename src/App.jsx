@@ -180,7 +180,7 @@ function TuneTogetherApp() {
  
  <div className="bg-gradient-to-r from-orange-500 to-red-500
 rounded-xl p-6 text-white">
- <h2 className="text-2xl font-bold mb-2">�� Trending Now</h2>
+ <h2 className="text-2xl font-bold mb-2"> Trending Now</h2>
  <p>Most popular songs this week</p>
  </div>
  <div>
@@ -200,7 +200,7 @@ from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
 text-lg">{song.title}</h4>
  <p className="text-gray-600">{song.artist}</p>
  <p className="text-sm text-gray-500 mt-1">
- ▶️ {song.plays} plays
+  {song.plays} plays
  </p>
  </div>
  <div className="flex gap-1">
