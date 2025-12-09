@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { Music, Users, Mic, Heart, Star, Home, TrendingUp, Plus } from 'lucide-react';
 
-//----------TuneTogether App----------
+
 
 function TuneTogetherApp() {
   
-  // Variables
+
   const [currentPage, setCurrentPage] = useState('home');
   const [showPremiumPopup, setShowPremiumPopup] = useState(false);
   const [likedSongs, setLikedSongs] = useState([1, 3]);
 
-  // Sample Data
-  // We had to use sample data but in the real version this information would come from a data base
   const friends = [
     { 
       id: 1, 
@@ -39,30 +37,28 @@ function TuneTogetherApp() {
     },
   ];
 
-  // Top songs this week
+ 
   const trendingSongs = [
     { id: 1, title: 'vampire', artist: 'Olivia Rodrigo', plays: '2.4M' },
     { id: 2, title: 'Cruel Summer', artist: 'Taylor Swift', plays: '3.1M' },
     { id: 3, title: 'Paint The Town Red', artist: 'Doja Cat', plays: '1.8M' }
   ];
 
-  // Functions
+
   function handleLike(songId) {
     if (likedSongs.includes(songId)) {
-      // Remove from liked songs
+   
       setLikedSongs(likedSongs.filter(id => id !== songId));
     } else {
-      // Add to liked songs
+
       setLikedSongs([...likedSongs, songId]);
     }
   }
 
-  // Function to show premium upgrade popup
   function showUpgrade() {
     setShowPremiumPopup(true);
   }
 
-  // Header
   function Header() {
     return (
       <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 shadow-lg">
@@ -74,7 +70,6 @@ function TuneTogetherApp() {
     );
   }
 
-  // Navigation Bar
   function NavigationBar() {
     return (
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-lg">
@@ -122,8 +117,6 @@ function TuneTogetherApp() {
     );
   }
 
-  // Homepage
-  // This shows what people are listening to
   function HomePage() {
     return (
       <div className="space-y-6">
