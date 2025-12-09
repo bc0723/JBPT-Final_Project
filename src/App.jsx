@@ -44,3 +44,20 @@ function TuneTogetherApp() {
     { id: 2, title: 'Cruel Summer', artist: 'Taylor Swift', plays: '3.1M' },
     { id: 3, title: 'Paint The Town Red', artist: 'Doja Cat', plays: '1.8M' }
   ];
+
+  // Functions
+  function handleLike(songId) {
+    if (likedSongs.includes(songId)) {
+      // Remove from liked songs
+      setLikedSongs(likedSongs.filter(id => id !== songId));
+    } else {
+      // Add to liked songs
+      setLikedSongs([...likedSongs, songId]);
+    }
+  }
+
+  // Function to show premium upgrade popup
+  function showUpgrade() {
+    setShowPremiumPopup(true);
+  }
+  
