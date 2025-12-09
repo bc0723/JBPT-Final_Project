@@ -215,5 +215,31 @@ function TuneTogetherApp() {
         </div>
       );
     }
+
+  // Main App
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <Header />
+      <div className="max-w-4xl mx-auto p-6 pb-28">
+        {currentPage === 'home' && <HomePage />}
+        {currentPage === 'trending' && <TrendingPage />}
+        {currentPage === 'friends' && <FriendsPage />}
+      </div>
+      <NavigationBar />
+      <PremiumPopup />
+      <div className="fixed bottom-20 left-0 right-0 bg-yellow-100 border-t-2 border-yellow-400 p-3 text-center">
+        <p className="font-medium text-gray-800">
+          Remove ads with Premium - Only $5.99/month!
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default TuneTogetherApp;
+          
+      
+      
+      
  
   
