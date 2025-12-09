@@ -60,4 +60,18 @@ function TuneTogetherApp() {
   function showUpgrade() {
     setShowPremiumPopup(true);
   }
+
+  // Header
+  function Header() {
+    return (
+      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-6 shadow-lg">
+        <div className="max-w-4xl mx-auto flex items-center gap-3">
+          <Music className="w-10 h-10" />
+          <h1 className="text-3xl font-bold">TuneTogether</h1>
+        </div>
+      </div>
+    );
+  }
+
+  
   
