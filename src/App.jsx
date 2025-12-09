@@ -170,4 +170,7 @@ function TuneTogetherApp() {
       </div>
     );
   }
+
+  // Trending Page
+  // This shows what songs are trending
   
