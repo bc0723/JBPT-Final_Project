@@ -73,5 +73,56 @@ function TuneTogetherApp() {
     );
   }
 
+  // Navigation Bar
+  function NavigationBar() {
+    return (
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-gray-200 shadow-lg">
+        <div className="max-w-4xl mx-auto flex justify-around py-4">
+          
+          {/* Home Button */}
+          <button
+            onClick={() => setCurrentPage('home')}
+            className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg ${
+              currentPage === 'home' ? 'text-purple-600 bg-purple-100' : 'text-gray-600'
+            }`}
+          >
+            <Home className="w-7 h-7" />
+            <span className="text-sm font-medium">Home</span>
+          </button>
+
+          {/* Trending Button */}
+          <button
+            onClick={() => setCurrentPage('trending')}
+            className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg ${
+              currentPage === 'trending' ? 'text-purple-600 bg-purple-100' : 'text-gray-600'
+            }`}
+          >
+            <TrendingUp className="w-7 h-7" />
+            <span className="text-sm font-medium">Trending</span>
+          </button>
+
+          {/* Karaoke Button (Premium Feature) */}
+          <button
+            onClick={showUpgrade}
+            className="flex flex-col items-center gap-1 px-6 py-2 rounded-lg text-gray-600 hover:bg-gray-100"
+          >
+            <Mic className="w-7 h-7" />
+            <span className="text-sm font-medium">Karaoke 👑</span>
+          </button>
+
+          {/* Friends Button */}
+          <button
+            onClick={() => setCurrentPage('friends')}
+            className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg ${
+              currentPage === 'friends' ? 'text-purple-600 bg-purple-100' : 'text-gray-600'
+            }`}
+          >
+            <Users className="w-7 h-7" />
+            <span className="text-sm font-medium">Friends</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
   
   
