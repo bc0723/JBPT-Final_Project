@@ -173,4 +173,52 @@ function TuneTogetherApp() {
 
   // Trending Page
   // This shows what songs are trending
+
+  function TrendingPage() {
+ return (
+ <div className="space-y-6">
+ 
+ <div className="bg-gradient-to-r from-orange-500 to-red-500
+rounded-xl p-6 text-white">
+ <h2 className="text-2xl font-bold mb-2">�� Trending Now</h2>
+ <p>Most popular songs this week</p>
+ </div>
+ <div>
+ {trendingSongs.map((song, index) => (
+ <div key={song.id} className="bg-white rounded-xl p-5 mb-3
+shadow-md">
+ <div className="flex items-center gap-4">
+ <div className="text-3xl font-bold text-purple-600 w-12">
+ #{index + 1}
+ </div>
+ <div className="w-16 h-16 bg-gradient-to-br
+from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+ <Music className="w-8 h-8 text-white" />
+ </div>
+ <div className="flex-1">
+ <h4 className="font-bold text-gray-800
+text-lg">{song.title}</h4>
+ <p className="text-gray-600">{song.artist}</p>
+ <p className="text-sm text-gray-500 mt-1">
+ ▶️ {song.plays} plays
+ </p>
+ </div>
+ <div className="flex gap-1">
+ <Star className="w-5 h-5 fill-yellow-400
+text-yellow-400" />
+ <Star className="w-5 h-5 fill-yellow-400
+text-yellow-400" />
+ <Star className="w-5 h-5 fill-yellow-400
+text-yellow-400" />
+ <Star className="w-5 h-5 fill-yellow-400
+text-yellow-400" />
+ <Star className="w-5 h-5 fill-gray-300 text-gray-300" />
+ </div>
+ </div>
+ </div>
+ ))}
+ </div>
+ </div>
+ );
+ 
   
