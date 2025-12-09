@@ -11,6 +11,7 @@ function TuneTogetherApp() {
   const [likedSongs, setLikedSongs] = useState([1, 3]);
 
   // Sample Data
+  // We had to use sample data but in the real version this information would come from a data base
   const friends = [
     { 
       id: 1, 
